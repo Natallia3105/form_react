@@ -48,9 +48,9 @@ const Login = () => {
                         <div className="text-gray-400">Lost password?</div>
                         <span className="text-gray-400 cursor-pointer">Click Here</span>
                     </div>
-                    <div className="flex justify-center gap-10 mt-10">
-                        <button className="bg-transparent border border-gray-400 rounded-lg px-4 py-2 text-gray-400">Sign Up</button>
-                        <button className="bg-transparent border border-gray-400 rounded-lg px-4 py-2 text-gray-400">Login</button>
+                    <div className="flex justify-center gap-14 mt-10">
+                        <button className="bg-purple-800 border  rounded-xl px-4 py-2 text-white">Sign Up</button>
+                        <button className="bg-purple-800 border rounded-xl px-4 py-2 text-white">Login</button>
                     </div>
                 </div>
             </div>
