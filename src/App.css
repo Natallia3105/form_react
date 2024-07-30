@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 
-body {
-    @apply bg-gradient-to-r;
-    background-image: linear-gradient(#2400B7, #42006C);
-    height:  100vh;
+@layer base {
+    body {
+        @apply bg-gradient-to-b from-transparent to-[#42006C] min-h-screen;
+    }
+
+    .bg-custom-gradient {
+        @apply bg-gradient-to-b from-transparent to-[#42006C];
+    }
 }
