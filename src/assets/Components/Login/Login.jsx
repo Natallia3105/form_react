@@ -1,14 +1,20 @@
 import '../../../App.css'
+import {useState} from "react";
 const Login = () => {
+    const [action, setAction] = useState("Login")
+
+    const styleSubmit = "bg-purple-800 border  rounded-xl px-4 py-2 text-white";
+    const styleGray = "bg-slate-50 border  rounded-xl px-4 py-2 text-gray-500"
     return (
         <div className="min-h-screen mt-72 pb-8 flex justify-center items-center bg-custom-gradient">
             <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
                 <div className="flex flex-col justify-center items-center w-full mt-8 pb-8">
-                    <div className="text-purple-800 text-4xl font-bold">Sign Up</div>
+                    <div className="text-purple-800 text-4xl font-bold">{action}</div>
                     <div className="w-20 h-2 bg-purple-800 rounded-lg mt-3"></div>
                 </div>
                 <div className="mt-7 flex flex-col">
-                    <div className="flex justify-center items-center w-full m-auto h-1/2 rounded-lg mb-4 gap-1">
+                    {action === "Login"?<div></div>:
+                        <div className="flex justify-center items-center w-full m-auto h-1/2 rounded-lg mb-4 gap-1">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -19,7 +25,8 @@ const Login = () => {
                             id="name"
                             placeholder="Name"
                             className="border bg-neutral-100 p-2 rounded-md w-full"/>
-                    </div>
+                    </div>}
+
                     <div className="flex justify-center items-center w-full m-auto h-1/2 rounded-lg mb-4 gap-1">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -45,12 +52,28 @@ const Login = () => {
                             className="border bg-neutral-100 p-2 rounded-md w-full"/>
                     </div>
                     <div className="flex justify-between items-center mt-4">
-                        <div className="text-gray-400">Lost password?</div>
-                        <span className="text-gray-400 cursor-pointer">Click Here</span>
+                        {action === "Sign Up" ? (
+                            <div></div>
+                        ) : (
+                            <div className="flex justify-between items-center w-full">
+                                <div className="text-gray-400">Lost password?</div>
+                                <span className="text-gray-400 cursor-pointer">Click Here</span>
+                            </div>
+                        )}
                     </div>
                     <div className="flex justify-center gap-14 mt-10">
-                        <button className="bg-purple-800 border  rounded-xl px-4 py-2 text-white">Sign Up</button>
-                        <button className="bg-purple-800 border rounded-xl px-4 py-2 text-white">Login</button>
+                        <button
+                            className={action === "Login"?styleGray:styleSubmit}
+                            onClick={() => {setAction("Sign Up")}}
+                        >
+                            Sign Up
+                        </button>
+                        <button
+                            className={action === "Sign Up"?styleGray:styleSubmit}
+                            onClick={() => {setAction("Login")}}
+                        >
+                            Login
+                        </button>
                     </div>
                 </div>
             </div>
