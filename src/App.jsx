@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import UserProfile from "./assets/Components/UserProfile/UserProfile.jsx";
 import Login from "./assets/Components/Login/Login.jsx";
+// import Login from "./assets/Components/Login/Login.jsx";
 
 function App() {
 
   return (
       <div>
-        <Login />
+          <UserProfile />
       </div>
 
   )

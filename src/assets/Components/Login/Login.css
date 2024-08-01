@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    /*body {*/
+    /*    @apply bg-gradient-to-b from-transparent to-[#42006C] min-h-screen;*/
+    /*}*/
+
+    .bg-custom-gradient {
+        @apply bg-gradient-to-b from-transparent to-[#42006C];
+    }
+}

@@ -1,4 +1,4 @@
-import '../../../App.css'
+import '../Login/Login.css'
 import {useState} from "react";
 const Login = () => {
     const [action, setAction] = useState("Login")
