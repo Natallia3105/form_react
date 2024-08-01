@@ -6,8 +6,8 @@
     /*body {*/
     /*    @apply bg-gradient-to-b from-transparent to-[#3182ce] min-h-screen;*/
     /*}*/
-
     .bg-custom-grad {
-        @apply bg-gradient-to-b from-transparent to-[#3182ce];
+        @apply bg-gradient-to-b;
+        background: linear-gradient(to bottom, white 30%, #3182ce);
     }
 }
