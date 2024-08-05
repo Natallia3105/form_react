@@ -46,7 +46,7 @@ const Effect = () => {
             <button className="border-2" onClick={() => {setType('TODOS')}}>TODOS</button>
             <button className="border-2" onClick={() => {setType('Posts')}}>Posts</button>
 
-            {/*<pre>{JSON.stringify(data, null, 2)}</pre>*/}
+            <pre>{JSON.stringify(data, null, 2)}</pre>
             <pre>{JSON.stringify(pos, null, 2)}</pre>
 
         </div>
