@@ -9,8 +9,8 @@ const Alert = () => {
         return null
     }
     return(
-        <div className='bg-rose-500' onClick={alert.toggle}>
-            Important message!
+        <div className='bg-rose-500' onClick={alert.high}>
+            {alert.text}
         </div>
     )
 }
